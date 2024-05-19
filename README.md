@@ -26,4 +26,9 @@ https://campus-ademass.com/
 # Nuevas Rutas
 [DELETE] 127.0.0.1:8000/api/delete/{id}      -> Eliminar nota con id {id}
 
-[PUT] 127.0.0.1:8000/api/note          -> Actualizar nota del usuario pasando 'content'
+[PUT] 127.0.0.1:8000/api/update/{id}          -> Actualizar nota del usuario pasando 'content'
+
+# TO-DO
+- [x] Implement delete note in route /api/delete/{id} 
+- [x] Implement edit note in route /api/update/{id} 
+- [ ] Add title in notes table
