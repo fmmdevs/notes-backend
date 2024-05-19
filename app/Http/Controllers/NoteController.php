@@ -18,7 +18,17 @@ class NoteController extends Controller
     {
         $note = new Note;
         $note->user_id = Auth::user()->id;
-        $note->content = $request->content;
+
+        
+        $validatedData = $request->validate([
+            'content' => 'required|string|max:255',
+            'title' => 'required|string|max:18'
+
+        ]);
+        // title
+        $note->title=$validatedData['title'];
+        $note->content=$validatedData['content'];
+
         $note->save();
         return response()->json(['message' => 'Success'], 200);
     }
@@ -45,7 +55,9 @@ class NoteController extends Controller
 
         // 1. Validamos datos entrantes 
         $validatedData = $request->validate([
-            'content' => 'required|string|max:255'
+            'content' => 'required|string|max:255',
+            'title' => 'required|string|max:18'
+
         ]);
 
         // 2. Encontramos la nota
@@ -58,6 +70,8 @@ class NoteController extends Controller
     
 
         // 4. Actualizamos la nota
+        $note->title=$validatedData['title'];
+
         $note->content=$validatedData['content'];
         // 5. Guardamos cambios
         $note->save();

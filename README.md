@@ -1,7 +1,15 @@
 # Backend Original y Creditos
-https://github.com/JJRuizDeveloper/vue-example-server
-https://www.youtube.com/watch?v=XkRi9_MS3ns&list=LL&index=3
-https://campus-ademass.com/
+<ul>
+    <li>
+        <a href="https://github.com/JJRuizDeveloper/vue-example-server">Backend Original</a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=XkRi9_MS3ns&list=LL&index=3">Enunciado Ejercicio Curso Vue3</a>
+    </li>
+    <li>
+        <a href="https://campus-ademass.com/">Más cursos</a>
+    </li>
+</ul>
 # Requisitos previos
 1. Composerº
 2. PHP 8.1 o más
@@ -31,4 +39,4 @@ https://campus-ademass.com/
 # TO-DO
 - [x] Implement delete note in route /api/delete/{id} 
 - [x] Implement edit note in route /api/update/{id} 
-- [ ] Add title in notes table
+- [x] Add title in notes table
